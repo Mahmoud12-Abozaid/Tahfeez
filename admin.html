@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>لوحة الإدارة | مكتب الجمعية الشرعية</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="logo.png.jpeg" alt="شعار المكتب">
+
+            <div>
+                <h5>مكتب الجمعية الشرعية</h5>
+                <span>كفر الشيخ</span>
+            </div>
+
+        </div>
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                <i class="bi bi-person-fill"></i>
+            </div>
+
+            <div>
+                <strong>مدير المكتب</strong>
+                <small>الإدارة</small>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="#dashboard" class="menu-link active">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>الرئيسية</span>
+            </a>
+
+            <a href="#admissionRequests" class="menu-link"><i class="bi bi-person-check"></i> طلبات الالتحاق</a>
+<a href="#students" class="menu-link">
+                <i class="bi bi-people-fill"></i>
+                <span>إدارة الطلاب</span>
+            </a>
+
+            <a href="#teachers" class="menu-link">
+                <i class="bi bi-person-video3"></i>
+                <span>إدارة المعلمين</span>
+            </a>
+
+            <a href="#groups" class="menu-link">
+                <i class="bi bi-book-half"></i>
+                <span>إدارة الحلقات</span>
+            </a>
+
+            <a href="#tasmee3" class="menu-link">
+                <i class="bi bi-mic-fill"></i>
+                <span>متابعة التسميع</span>
+            </a>
+
+            <a href="#notifications" class="menu-link">
+                <i class="bi bi-bell-fill"></i>
+                <span>الإشعارات</span>
+                <b class="notification-dot"></b>
+            </a>
+
+            <a href="#reports" class="menu-link">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>التقارير والإحصائيات</span>
+            </a>
+
+            <a href="#settings" class="menu-link">
+                <i class="bi bi-gear-fill"></i>
+                <span>الإعدادات</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button type="button" class="dashboard-logout" id="adminLogout">
+                <i class="bi bi-box-arrow-right"></i>
+                تسجيل الخروج
+            </button>
+
+            <a href="index.html" class="back-home">
+                <i class="bi bi-house"></i>
+                العودة للموقع
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="page-title">
+
+                <span>لوحة التحكم</span>
+
+                <h2>أهلاً بك، مدير المكتب 👋</h2>
+
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+                    <i class="bi bi-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="admin-mini">
+
+                    <div class="mini-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <strong>مدير المكتب</strong>
+                        <small>الإدارة</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="dashboard-section">
+
+            <div class="welcome-box">
+
+                <div>
+
+                    <span class="welcome-small">
+                        مقر الجمعية الشرعية بكفر الشيخ
+                    </span>
+
+                    <h1>
+                        إدارة مكتب التحفيظ بسهولة ووضوح
+                    </h1>
+
+                    <p>
+                        تابع الطلاب والمعلمين والحلقات والتسميعات
+                        من مكان واحد.
+                    </p>
+
+                </div>
+
+                <div class="welcome-icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </div>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon students-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>إجمالي الطلاب</span>
+                        <h3 id="studentsCount">0</h3>
+                        <small>طالب مسجل</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon teachers-icon">
+                        <i class="bi bi-person-video3"></i>
+                    </div>
+
+                    <div>
+                        <span>المعلمون</span>
+                        <h3 id="teachersCount">6</h3>
+                        <small>معلمين ومعلمات</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon groups-icon">
+                        <i class="bi bi-book-half"></i>
+                    </div>
+
+                    <div>
+                        <span>الحلقات</span>
+                        <h3 id="groupsCount">6</h3>
+                        <small>حلقة نشطة</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon tasmee3-icon">
+                        <i class="bi bi-mic-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>تسميع اليوم</span>
+                        <h3 id="tasmee3Count">0</h3>
+                        <small>تسميع مسجل</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD GRID -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- LAST TASME3 -->
+
+                <div class="dashboard-card large-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span>متابعة الطلاب</span>
+                            <h3>آخر عمليات التسميع</h3>
+                        </div>
+
+                        <i class="bi bi-journal-check"></i>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>الطالب</th>
+                                    <th>الحلقة</th>
+                                    <th>المعلم</th>
+                                    <th>السورة</th>
+                                    <th>التقييم</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="recentTasmee3">
+
+                                <tr>
+                                    <td colspan="5" class="empty-state">
+                                        لا توجد عمليات تسميع حتى الآن
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVE GROUPS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span>الحلقات</span>
+                            <h3>الحلقات النشطة</h3>
+                        </div>
+
+                        <i class="bi bi-collection-play-fill"></i>
+
+                    </div>
+
+                    <div class="groups-list">
+
+                        <div class="group-item">
+
+                            <div class="group-icon">
+                                <i class="bi bi-book"></i>
+                            </div>
+
+                            <div>
+                                <strong>الحفظ والمراجعة</strong>
+                                <small>الشيخ محمد سعدالله</small>
+                            </div>
+
+                            <b>12</b>
+
+                        </div>
+
+
+                        <div class="group-item">
+
+                            <div class="group-icon">
+                                <i class="bi bi-mic"></i>
+                            </div>
+
+                            <div>
+                                <strong>التجويد وتصحيح التلاوة</strong>
+                                <small>الشيخ إبراهيم عطية</small>
+                            </div>
+
+                            <b>10</b>
+
+                        </div>
+
+
+                        <div class="group-item">
+
+                            <div class="group-icon">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+
+                            <div>
+                                <strong>المراجعة المكثفة</strong>
+                                <small>الشيخ سامي نصار</small>
+                            </div>
+
+                            <b>8</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="dashboard-card quick-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span>اختصارات</span>
+                        <h3>إجراءات سريعة</h3>
+                    </div>
+
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button onclick="showSection('students')">
+                        <i class="bi bi-person-plus-fill"></i>
+                        <span>إضافة طالب</span>
+                    </button>
+
+                    <button onclick="showSection('teachers')">
+                        <i class="bi bi-person-video3"></i>
+                        <span>عرض المعلمين</span>
+                    </button>
+
+                    <button onclick="showSection('groups')">
+                        <i class="bi bi-book-half"></i>
+                        <span>عرض الحلقات</span>
+                    </button>
+
+                    <button onclick="showSection('reports')">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <span>عرض التقارير</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STUDENTS ================= -->
+
+        <section id="admissionRequests" class="content-section">
+<div class="section-heading"><div><span>طلبات جديدة</span><h2>طلبات الالتحاق</h2></div></div>
+<div class="dashboard-card"><div class="table-responsive"><table class="admin-table"><thead><tr><th>الطالب</th><th>ولي الأمر</th><th>الهاتف</th><th>الحلقة</th><th>المستوى</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="admissionRequestsTable"></tbody></table></div></div>
+</section>
+
+<section id="students" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>إدارة البيانات</span>
+                    <h2>إدارة الطلاب</h2>
+                </div>
+
+                <button class="primary-btn" onclick="openStudentModal()">
+                    <i class="bi bi-plus-lg"></i>
+                    إضافة طالب
+                </button>
+
+            </div>
+
+
+            <div class="filter-card">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text"
+                        id="studentSearch"
+                        placeholder="ابحث عن اسم الطالب...">
+
+                </div>
+
+                <select id="groupFilter">
+
+                    <option value="all">كل الحلقات</option>
+                    <option value="الحفظ والمراجعة">الحفظ والمراجعة</option>
+                    <option value="التجويد وتصحيح التلاوة">التجويد وتصحيح التلاوة</option>
+                    <option value="المراجعة المكثفة">المراجعة المكثفة</option>
+                    <option value="حلقة الفتيات - حفظ ومراجعة">حلقة الفتيات - حفظ ومراجعة</option>
+                    <option value="حلقة الناشئات - تلاوة">حلقة الناشئات - تلاوة</option>
+                    <option value="حلقة التلاوة والمراجعة">حلقة التلاوة والمراجعة</option>
+
+                </select>
+
+                <select id="teacherFilter">
+                    <option value="all">كل المعلمين</option>
+                    <option value="الشيخ محمد سعدالله">الشيخ محمد سعدالله</option>
+                    <option value="الشيخ إبراهيم عطية">الشيخ إبراهيم عطية</option>
+                    <option value="الشيخ سامي نصار">الشيخ سامي نصار</option>
+                    <option value="المعلمة رحمة إدريس">المعلمة رحمة إدريس</option>
+                    <option value="المعلمة أميرة إدريس">المعلمة أميرة إدريس</option>
+                    <option value="المعلمة ياسمين الصعيدي">المعلمة ياسمين الصعيدي</option>
+                </select>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="table-responsive">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>الطالب</th>
+                                <th>الحلقة</th>
+                                <th>المعلم</th>
+                                <th>المستوى</th>
+                                <th>الحالة</th>
+                                <th>إجراء</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="studentsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TEACHERS ================= -->
+
+        <section id="teachers" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>فريق المكتب</span>
+                    <h2>إدارة المعلمين</h2>
+                </div>
+
+            </div>
+
+
+            <div class="teachers-grid">
+
+                <div class="teacher-admin-card">
+
+                    <img src="teacher1.jpg" alt="الشيخ محمد سعدالله">
+
+                    <div>
+                        <span>شيخ</span>
+                        <h3>الشيخ محمد سعدالله</h3>
+                        <p>مسؤول حلقة الحفظ والمراجعة</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            12 طالب
+                        </span>
+
+                        <span>
+                            <i class="bi bi-clock"></i>
+                            السبت والثلاثاء
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-admin-card">
+
+                    <img src="teacher2.jpg" alt="الشيخ إبراهيم عطية">
+
+                    <div>
+                        <span>شيخ</span>
+                        <h3>الشيخ إبراهيم عطية</h3>
+                        <p>مسؤول حلقة التجويد وتصحيح التلاوة</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            10 طلاب
+                        </span>
+
+                        <span>
+                            <i class="bi bi-clock"></i>
+                            الأحد والأربعاء
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-admin-card">
+
+                    <img src="teacher3.jpg" alt="الشيخ سامي نصار">
+
+                    <div>
+                        <span>شيخ</span>
+                        <h3>الشيخ سامي نصار</h3>
+                        <p>مسؤول حلقة المراجعة المكثفة</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            8 طلاب
+                        </span>
+
+                        <span>
+                            <i class="bi bi-clock"></i>
+                            الاثنين والخميس
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-admin-card no-image">
+
+                    <div class="female-teacher-icon">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>معلمة</span>
+                        <h3>المعلمة رحمة إدريس</h3>
+                        <p>حلقة الناشئات والصغار</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            9 طالبات
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-admin-card no-image">
+
+                    <div class="female-teacher-icon">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>معلمة</span>
+                        <h3>المعلمة أميرة إدريس</h3>
+                        <p>حلقة التلاوة والحفظ</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            7 طالبات
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-admin-card no-image">
+
+                    <div class="female-teacher-icon">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <div>
+                        <span>معلمة</span>
+                        <h3>المعلمة ياسمين الصعيدي</h3>
+                        <p>حلقة المراجعة للصغار</p>
+                    </div>
+
+                    <div class="teacher-info">
+                        <span>
+                            <i class="bi bi-people"></i>
+                            6 طالبات
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card" style="margin-top:24px;">
+                <div class="card-header">
+                    <div>
+                        <span>إضافة حساب جديد</span>
+                        <h3>إضافة معلم / معلمة</h3>
+                    </div>
+                    <button class="btn btn-primary" type="button" id="openTeacherModal">
+                        <i class="bi bi-person-plus"></i> إضافة معلم
+                    </button>
+                </div>
+                <div id="customTeachersList" class="table-responsive"></div>
+            </div>
+
+        </section>
+
+        <!-- Teacher Modal -->
+        <div class="modal fade" id="teacherModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border:0;border-radius:18px;overflow:hidden;">
+                    <div class="modal-header">
+                        <h5 class="modal-title">إضافة معلم جديد</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <form id="teacherForm">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">اسم المعلم / المعلمة</label>
+                                <input id="teacherName" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">اسم المستخدم</label>
+                                <input id="teacherUsername" class="form-control" required minlength="3">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">كلمة المرور</label>
+                                <input id="teacherPassword" type="password" class="form-control" required minlength="4">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">نوع الحساب</label>
+                                <select id="teacherType" class="form-select">
+                                    <option value="معلم">معلم</option>
+                                    <option value="معلمة">معلمة</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">الحلقة</label>
+                                <select id="teacherGroup" class="form-select" required>
+                                    <option value="الحفظ والمراجعة">حلقة الحفظ والمراجعة</option>
+                                    <option value="التجويد وتصحيح التلاوة">حلقة التجويد وتصحيح التلاوة</option>
+                                    <option value="المراجعة المكثفة">حلقة المراجعة المكثفة</option>
+                                    <option value="حلقة الفتيات - حفظ ومراجعة">حلقة الفتيات - حفظ ومراجعة</option>
+                                    <option value="حلقة الناشئات - تلاوة">حلقة الناشئات - تلاوة</option>
+                                    <option value="حلقة التلاوة والمراجعة">حلقة التلاوة والمراجعة</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">التخصص / ملاحظة</label>
+                                <input id="teacherSpecialty" class="form-control" placeholder="مثال: تجويد وتصحيح تلاوة">
+                            </div>
+                            <div id="teacherFormMessage" class="small"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-primary">حفظ المعلم</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= GROUPS ================= -->
+
+        <section id="groups" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>تنظيم الدراسة</span>
+                    <h2>إدارة الحلقات</h2>
+                </div>
+
+            </div>
+
+
+            <div class="groups-admin-grid">
+
+                <div class="big-group-card">
+
+                    <div class="big-group-icon">
+                        <i class="bi bi-book-half"></i>
+                    </div>
+
+                    <span>حفظ ومراجعة</span>
+
+                    <h3>حلقة الحفظ والمراجعة</h3>
+
+                    <p>
+                        مخصصة للطلاب الذين يرغبون في حفظ القرآن الكريم
+                        مع متابعة المراجعة بشكل مستمر.
+                    </p>
+
+                    <div class="group-meta">
+
+                        <span>
+                            <i class="bi bi-person"></i>
+                            الشيخ محمد سعدالله
+                        </span>
+
+                        <span>
+                            <i class="bi bi-people"></i>
+                            12 طالب
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="big-group-card">
+
+                    <div class="big-group-icon">
+                        <i class="bi bi-mic-fill"></i>
+                    </div>
+
+                    <span>تجويد</span>
+
+                    <h3>حلقة التجويد وتصحيح التلاوة</h3>
+
+                    <p>
+                        تهتم بتحسين مخارج الحروف وأحكام التجويد
+                        وتصحيح أخطاء التلاوة.
+                    </p>
+
+                    <div class="group-meta">
+
+                        <span>
+                            <i class="bi bi-person"></i>
+                            الشيخ إبراهيم عطية
+                        </span>
+
+                        <span>
+                            <i class="bi bi-people"></i>
+                            10 طلاب
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="big-group-card">
+
+                    <div class="big-group-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <span>مراجعة</span>
+
+                    <h3>حلقة المراجعة المكثفة</h3>
+
+                    <p>
+                        مخصصة لمن أتموا قدرًا من الحفظ ويحتاجون
+                        إلى تثبيت ومراجعة مستمرة.
+                    </p>
+
+                    <div class="group-meta">
+
+                        <span>
+                            <i class="bi bi-person"></i>
+                            الشيخ سامي نصار
+                        </span>
+
+                        <span>
+                            <i class="bi bi-people"></i>
+                            8 طلاب
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="big-group-card female-group">
+
+                    <div class="big-group-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <span>للناشئات</span>
+
+                    <h3>حلقة الناشئات والصغار</h3>
+
+                    <p>
+                        بيئة تعليمية مناسبة للصغار تساعدهم على
+                        حفظ القرآن والتعلق به بطريقة مبسطة.
+                    </p>
+
+                    <div class="group-meta">
+
+                        <span>
+                            <i class="bi bi-person"></i>
+                            المعلمة رحمة إدريس
+                        </span>
+
+                        <span>
+                            <i class="bi bi-people"></i>
+                            9 طالبات
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TASME3 ================= -->
+
+        <section id="tasmee3" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>المتابعة اليومية</span>
+                    <h2>متابعة التسميع</h2>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="tasmee3-summary">
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <strong id="goodCount">0</strong>
+                        <span>تقييم جيد جدًا</span>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-star-fill"></i>
+                        <strong id="excellentCount">0</strong>
+                        <span>تقييم ممتاز</span>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-journal-check"></i>
+                        <strong id="totalTasmee3">0</strong>
+                        <span>إجمالي التسميعات</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NOTIFICATIONS ================= -->
+
+        <section id="notifications" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>التنبيهات</span>
+                    <h2>الإشعارات</h2>
+                </div>
+
+                <button class="primary-btn" onclick="addNotification()">
+                    <i class="bi bi-plus-lg"></i>
+                    إشعار جديد
+                </button>
+
+            </div>
+
+
+            <div id="notificationsList" class="notifications-list"></div>
+
+        </section>
+
+
+        <!-- ================= REPORTS ================= -->
+
+        <section id="reports" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>تحليل الأداء</span>
+                    <h2>التقارير والإحصائيات</h2>
+                </div>
+
+            </div>
+
+
+            <div class="reports-grid">
+
+                <div class="report-card">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <h3 id="reportStudents">0</h3>
+
+                    <p>إجمالي الطلاب</p>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <i class="bi bi-mic-fill"></i>
+
+                    <h3 id="reportTasmee3">0</h3>
+
+                    <p>إجمالي التسميعات</p>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <i class="bi bi-book-half"></i>
+
+                    <h3>6</h3>
+
+                    <p>الحلقات النشطة</p>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <i class="bi bi-person-video3"></i>
+
+                    <h3>6</h3>
+
+                    <p>المعلمون والمعلمات</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card report-message">
+
+                <i class="bi bi-lightbulb-fill"></i>
+
+                <div>
+
+                    <h3>ملاحظة الإدارة</h3>
+
+                    <p>
+                        تساعد هذه الإحصائيات إدارة المكتب على متابعة
+                        مستوى النشاط والطلاب بشكل مبسط ومنظم.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SETTINGS ================= -->
+
+        <section id="settings" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>إعدادات النظام</span>
+                    <h2>الإعدادات</h2>
+                </div>
+
+            </div>
+
+
+            <div class="settings-card">
+
+                <div class="setting-row">
+
+                    <div>
+                        <i class="bi bi-building"></i>
+
+                        <div>
+                            <strong>اسم المكتب</strong>
+                            <small>مقر الجمعية الشرعية بكفر الشيخ</small>
+                        </div>
+                    </div>
+
+                    <span class="setting-status">نشط</span>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <i class="bi bi-database"></i>
+
+                        <div>
+                            <strong>تخزين البيانات</strong>
+                            <small>Local Storage</small>
+                        </div>
+                    </div>
+
+                    <span class="setting-status">متصل</span>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <i class="bi bi-shield-check"></i>
+
+                        <div>
+                            <strong>نوع المشروع</strong>
+                            <small>Front-End Application</small>
+                        </div>
+                    </div>
+
+                    <span class="setting-status">جاهز</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ADD STUDENT MODAL ================= -->
+
+    <div class="custom-modal" id="studentModal">
+
+        <div class="modal-box">
+
+            <button class="close-modal" onclick="closeStudentModal()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="modal-title">
+
+                <i class="bi bi-person-plus-fill"></i>
+
+                <div>
+                    <h3>إضافة طالب جديد</h3>
+                    <p>أدخل بيانات الطالب الأساسية</p>
+                </div>
+
+            </div>
+
+
+            <form id="studentForm">
+
+                <div class="form-group">
+
+                    <label>اسم الطالب</label>
+
+                    <input type="text"
+                        id="studentName"
+                        placeholder="مثال: أحمد محمد"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>اسم المستخدم</label>
+
+                    <input type="text"
+                        id="studentUsername"
+                        placeholder="مثال: youssef"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>كلمة المرور</label>
+
+                    <input type="password"
+                        id="studentPassword"
+                        placeholder="مثال: 1234"
+                        minlength="4"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>السن</label>
+
+                    <input type="number"
+                        id="studentAge"
+                        min="4"
+                        max="80"
+                        placeholder="مثال: 12">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>الحلقة</label>
+
+                    <select id="studentGroup" required>
+
+                        <option value="">اختر الحلقة</option>
+
+                        <option value="الحفظ والمراجعة">
+                            الحفظ والمراجعة
+                        </option>
+
+                        <option value="التجويد وتصحيح التلاوة">
+                            التجويد وتصحيح التلاوة
+                        </option>
+
+                        <option value="المراجعة المكثفة">
+                            المراجعة المكثفة
+                        </option>
+                        <option value="حلقة الفتيات - حفظ ومراجعة">
+                            حلقة الفتيات - حفظ ومراجعة
+                        </option>
+                        <option value="حلقة الناشئات - تلاوة">
+                            حلقة الناشئات - تلاوة
+                        </option>
+                        <option value="حلقة التلاوة والمراجعة">
+                            حلقة التلاوة والمراجعة
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>المستوى</label>
+
+                    <select id="studentLevel">
+
+                        <option>مبتدئ</option>
+                        <option>جيد</option>
+                        <option>جيد جدًا</option>
+                        <option>ممتاز</option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="primary-btn full-btn" type="submit">
+
+                    <i class="bi bi-check-lg"></i>
+
+                    حفظ الطالب
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+
+<!-- ================= NOTIFICATION MODAL ================= -->
+<div class="admin-notification-modal" id="notificationModal" aria-hidden="true">
+    <div class="admin-notification-box">
+        <button type="button" class="admin-modal-close" id="closeNotificationModal">×</button>
+        <div class="admin-modal-icon"><i class="bi bi-bell-fill"></i></div>
+        <h3>إضافة إشعار جديد</h3>
+        <p>سيظهر الإشعار للطلاب عند فتح لوحة الطالب.</p>
+        <form id="notificationForm">
+            <label for="notificationTitle">عنوان الإشعار</label>
+            <input id="notificationTitle" required placeholder="مثال: موعد التسميع">
+
+            <label for="notificationText">محتوى الإشعار</label>
+            <textarea id="notificationText" rows="4" required placeholder="اكتب تفاصيل الإشعار هنا..."></textarea>
+
+            <button type="submit" class="primary-btn">
+                <i class="bi bi-check2"></i>
+                نشر الإشعار
+            </button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<script>
+// Fix: ensure accepted student يظهر فوراً
+function accept(id){
+  const requests = JSON.parse(localStorage.getItem("quranAdmissionRequests") || "[]");
+  const r = requests.find(x => String(x.id) === String(id));
+  if(!r) return;
+
+  let studentsData = JSON.parse(localStorage.getItem("quranStudents") || "[]");
+
+  if(studentsData.some(s => String(s.username||"").toLowerCase() === String(r.username).toLowerCase())){
+    alert("اسم المستخدم مستخدم بالفعل.");
+    return;
+  }
+
+  const student = {
+    id: Date.now(),
+    name: r.name,
+    username: r.username,
+    password: r.password,
+    age: r.age,
+    guardian: r.guardian,
+    phone: r.phone,
+    group: r.group,
+    teacher: r.teacher,
+    level: r.level,
+    status: "نشط",
+    progress: 0,
+    attendance: "pending",
+    note: r.notes || "",
+    admissionSource: "website"
+  };
+
+  studentsData.push(student);
+
+  localStorage.setItem("quranStudents", JSON.stringify(studentsData));
+  localStorage.setItem("teacherStudents", JSON.stringify(studentsData));
+
+  // update UI if variables/functions موجودة
+  if (typeof students !== "undefined") {
+    students = studentsData;
+  }
+  if (typeof displayStudents === "function") {
+    displayStudents();
+  }
+
+  r.status = "accepted";
+  r.acceptedAt = new Date().toISOString();
+  localStorage.setItem("quranAdmissionRequests", JSON.stringify(requests));
+
+  if (typeof render === "function") render();
+  if (typeof updateStatistics === "function") updateStatistics();
+
+  alert("تم قبول الطالب وظهر في الجدول ✔️");
+}
+</script>

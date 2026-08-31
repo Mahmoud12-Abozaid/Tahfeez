@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>لوحة الطالب | مكتب الجمعية الشرعية</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+<!-- =====================================
+     MOBILE OVERLAY
+===================================== -->
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- =====================================
+     SIDEBAR
+===================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <!-- Logo -->
+
+    <div class="sidebar-logo">
+
+        <img src="logo.png.jpeg"
+             alt="شعار مكتب الجمعية الشرعية">
+
+        <div>
+            <h5>مكتب الجمعية الشرعية</h5>
+            <span>كفر الشيخ</span>
+        </div>
+
+    </div>
+
+
+    <!-- Student Profile -->
+
+    <div class="sidebar-profile">
+
+        <div class="profile-avatar">
+            <i class="bi bi-person-fill"></i>
+        </div>
+
+        <div>
+
+            <strong id="sideStudentName">
+                أحمد محمد علي
+            </strong>
+
+            <span>
+                طالب
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Menu -->
+
+    <nav class="sidebar-menu">
+
+        <a href="#dashboard"
+           class="sidebar-link active"
+           data-section="dashboard">
+
+            <i class="bi bi-grid-1x2-fill"></i>
+
+            <span>الرئيسية</span>
+
+        </a>
+
+
+        <a href="#memorization"
+           class="sidebar-link"
+           data-section="memorization">
+
+            <i class="bi bi-book"></i>
+
+            <span>رحلتي في الحفظ</span>
+
+        </a>
+
+
+        <a href="#tasmee3"
+           class="sidebar-link"
+           data-section="tasmee3">
+
+            <i class="bi bi-mic-fill"></i>
+
+            <span>التسميع</span>
+
+        </a>
+
+
+        <a href="#schedule"
+           class="sidebar-link"
+           data-section="schedule">
+
+            <i class="bi bi-calendar3"></i>
+
+            <span>جدول الحلقة</span>
+
+        </a>
+
+
+        <a href="#notifications"
+           class="sidebar-link"
+           data-section="notifications">
+
+            <i class="bi bi-bell-fill"></i>
+
+            <span>الإشعارات</span>
+
+            <span class="sidebar-notification"
+                  id="notificationCount">
+                0
+            </span>
+
+        </a>
+
+
+        <a href="#achievements"
+           class="sidebar-link"
+           data-section="achievements">
+
+            <i class="bi bi-trophy-fill"></i>
+
+            <span>الإنجازات</span>
+
+        </a>
+
+
+        <a href="#profile"
+           class="sidebar-link"
+           data-section="profile">
+
+            <i class="bi bi-person-circle"></i>
+
+            <span>الملف الشخصي</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- Bottom -->
+
+    <div class="sidebar-bottom">
+
+        <button type="button"
+                class="dashboard-logout"
+                id="studentLogout">
+
+            <i class="bi bi-box-arrow-right"></i>
+
+            تسجيل الخروج
+
+        </button>
+
+        <a href="index.html"
+           class="back-home">
+
+            <i class="bi bi-house"></i>
+
+            العودة للموقع
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================
+     MAIN
+===================================== -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div class="header-right">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu">
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+            <div>
+
+                <span class="header-small">
+                    السلام عليكم
+                </span>
+
+                <h1>
+                    أهلاً بك
+                    <span class="student-name"
+                          id="headerStudentName">
+                        أحمد محمد علي
+                    </span>
+                    🌿
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="header-notification"
+            id="headerNotification">
+
+            <i class="bi bi-bell"></i>
+
+            <span id="headerNotificationCount">
+                0
+            </span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================
+         DASHBOARD
+    ===================================== -->
+
+    <section
+        class="page-section"
+        id="section-dashboard">
+
+
+        <!-- Welcome -->
+
+        <div class="welcome-card">
+
+            <div class="welcome-text">
+
+                <span>
+                    أهلاً بك في رحلتك مع القرآن الكريم
+                </span>
+
+                <h2>
+                    وقُل ربِّ زدني علماً 🤍
+                </h2>
+
+                <p>
+                    استمر في الحفظ والمراجعة،
+                    وكل خطوة صغيرة تقربك من هدفك.
+                </p>
+
+                <button
+                    class="welcome-btn"
+                    data-go="memorization">
+
+                    <i class="bi bi-bar-chart-fill"></i>
+
+                    متابعة رحلتي
+
+                </button>
+
+            </div>
+
+
+            <div class="welcome-icon">
+
+                <i class="bi bi-book-half"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Statistics -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon green">
+                    <i class="bi bi-book"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        المحفوظ
+                    </span>
+
+                    <strong id="savedParts">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon gold">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        نسبة التقدم
+                    </span>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon blue">
+                    <i class="bi bi-check2-circle"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        أيام الالتزام
+                    </span>
+
+                    <strong id="commitmentDays">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon purple">
+                    <i class="bi bi-star-fill"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        النقاط
+                    </span>
+
+                    <strong id="studentPoints">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Main Grid -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- Memorization -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <small>
+                            تقدمك الحالي
+                        </small>
+
+                        <h3>
+                            رحلتي في الحفظ
+                        </h3>
+
+                    </div>
+
+                    <a href="#memorization"
+                       class="view-link"
+                       data-section-link="memorization">
+
+                        عرض التفاصيل
+                        <i class="bi bi-arrow-left"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="memorization-info">
+
+                    <div>
+
+                        <span>
+                            آخر محفوظ
+                        </span>
+
+                        <strong id="lastSurah">
+                            سورة الفاتحة
+                        </strong>
+
+                    </div>
+
+
+                    <div class="memorization-percent">
+
+                        <strong id="dashboardProgress">
+                            0%
+                        </strong>
+
+                        <span>
+                            من الرحلة
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div
+                        class="progress-bar-custom"
+                        id="dashboardProgressBar">
+                    </div>
+
+                </div>
+
+
+                <div class="progress-bottom">
+
+                    <span>
+                        <i class="bi bi-check-circle"></i>
+                        أجزاء محفوظة:
+                        <strong id="dashboardParts">
+                            0
+                        </strong>
+                    </span>
+
+                    <span>
+                        الهدف:
+                        <strong>
+                            30 جزء
+                        </strong>
+                    </span>
+
+                </div>
+
+
+                <div class="next-surah">
+
+                    <div class="next-surah-icon">
+
+                        <i class="bi bi-book"></i>
+
+                    </div>
+
+                    <div>
+
+                        <small>
+                            الدرس القادم
+                        </small>
+
+                        <strong id="nextLesson">
+                            سورة البقرة - الآيات 1 : 5
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Goal -->
+
+            <div class="goal-card">
+
+                <div class="goal-header">
+
+                    <div>
+
+                        <small>
+                            هدف هذا الأسبوع
+                        </small>
+
+                        <h3>
+                            حفظ ومراجعة
+                        </h3>
+
+                    </div>
+
+                    <i class="bi bi-bullseye"></i>
+
+                </div>
+
+
+                <div class="goal-number">
+
+                    <strong id="weeklyCompleted">
+                        0
+                    </strong>
+
+                    <span>
+                        من
+                    </span>
+
+                    <b id="weeklyTarget">
+                        5
+                    </b>
+
+                    <span>
+                        مهام
+                    </span>
+
+                </div>
+
+
+                <div class="goal-progress">
+
+                    <div id="weeklyProgress">
+                    </div>
+
+                </div>
+
+
+                <p id="weeklyMessage">
+                    ابدأ أول مهمة هذا الأسبوع 🌱
+                </p>
+
+
+                <a href="#memorization"
+                   class="goal-button"
+                   data-section-link="memorization">
+
+                    عرض الخطة
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Circle -->
+
+        <div class="dashboard-card circle-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        حلقتك الحالية
+                    </small>
+
+                    <h3>
+                        بيانات الحلقة
+                    </h3>
+
+                </div>
+
+                <span class="view-link">
+                    نشطة الآن
+                </span>
+
+            </div>
+
+
+            <div class="circle-content">
+
+                <div class="circle-main-icon">
+
+                    <i class="bi bi-people-fill"></i>
+
+                </div>
+
+
+                <div class="circle-details">
+
+                    <span>
+                        اسم الحلقة
+                    </span>
+
+                    <h4 id="circleName">
+                        حلقة الحفظ والمراجعة
+                    </h4>
+
+
+                    <div class="teacher-name">
+
+                        <i class="bi bi-person-check"></i>
+
+                        المعلم:
+
+                        <strong id="circleTeacher">
+                            الشيخ محمد سعدالله
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="circle-time">
+
+                    <div>
+
+                        <i class="bi bi-calendar-event"></i>
+
+                        <span>
+                            الأيام
+                        </span>
+
+                        <strong id="circleDays">
+                            السبت - الاثنين - الأربعاء
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-clock"></i>
+
+                        <span>
+                            الموعد
+                        </span>
+
+                        <strong id="circleTime">
+                            5:00 مساءً
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="circle-place">
+
+                <i class="bi bi-geo-alt-fill"></i>
+
+                مقر الجمعية الشرعية - كفر الشيخ
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Two Columns -->
+
+        <div class="two-columns">
+
+
+            <!-- Last Tasmee3 -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <small>
+                            آخر متابعة
+                        </small>
+
+                        <h3>
+                            آخر تسميع
+                        </h3>
+
+                    </div>
+
+                    <a href="#tasmee3"
+                       class="view-link"
+                       data-section-link="tasmee3">
+
+                        كل التسميعات
+
+                    </a>
+
+                </div>
+
+
+                <div class="last-tasmee3">
+
+                    <div class="tasmee3-icon">
+
+                        <i class="bi bi-mic-fill"></i>
+
+                    </div>
+
+
+                    <div class="tasmee3-data">
+
+                        <span>
+                            السورة
+                        </span>
+
+                        <strong id="lastTasmee3Surah">
+                            لم يتم تسجيل تسميع
+                        </strong>
+
+                        <small id="lastTasmee3Date">
+                            سجل أول تسميع لك
+                        </small>
+
+                    </div>
+
+
+                    <div class="tasmee3-evaluation">
+
+                        <span>
+                            التقييم
+                        </span>
+
+                        <strong id="lastEvaluation">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-note">
+
+                    <i class="bi bi-chat-quote"></i>
+
+                    <div>
+
+                        <strong>
+                            ملاحظة المعلم
+                        </strong>
+
+                        <p id="teacherNote">
+                            بارك الله فيك، استمر في المراجعة.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notifications -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <small>
+                            تابع مستجداتك
+                        </small>
+
+                        <h3>
+                            آخر الإشعارات
+                        </h3>
+
+                    </div>
+
+                    <a href="#notifications"
+                       class="view-link"
+                       data-section-link="notifications">
+
+                        عرض الكل
+
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="mini-notifications"
+                    id="dashboardNotifications">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Achievements -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        إنجازاتك
+                    </small>
+
+                    <h3>
+                        أحدث الإنجازات 🏆
+                    </h3>
+
+                </div>
+
+                <a href="#achievements"
+                   class="view-link"
+                   data-section-link="achievements">
+
+                    كل الإنجازات
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="achievement-preview"
+                id="dashboardAchievements">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         MEMORIZATION
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-memorization">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        متابعة مستواك
+                    </small>
+
+                    <h3>
+                        رحلتي في الحفظ 📖
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="memorization-info">
+
+                <div>
+
+                    <span>
+                        نسبة الإنجاز
+                    </span>
+
+                    <strong id="memoryProgressText">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="memorization-percent">
+
+                    <strong id="memoryPartsText">
+                        0
+                    </strong>
+
+                    <span>
+                        جزء محفوظ
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar-custom"
+                    id="memoryProgressBar">
+                </div>
+
+            </div>
+
+
+            <div class="progress-bottom">
+
+                <span>
+                    البداية
+                </span>
+
+                <span>
+                    30 جزء
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        خطة هذا الأسبوع
+                    </small>
+
+                    <h3>
+                        المهام المطلوبة
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div id="weeklyTasks">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TASME3
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-tasmee3">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        تسجيل المتابعة
+                    </small>
+
+                    <h3>
+                        تسجيل تسميع جديد 🎙️
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <form id="tasmee3Form">
+
+                <div class="row g-3">
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            السورة
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="tasmee3Surah"
+                            required>
+
+                            <option value="">
+                                اختر السورة
+                            </option>
+
+                            <option>
+                                الفاتحة
+                            </option>
+
+                            <option>
+                                البقرة
+                            </option>
+
+                            <option>
+                                آل عمران
+                            </option>
+
+                            <option>
+                                النساء
+                            </option>
+
+                            <option>
+                                المائدة
+                            </option>
+
+                            <option>
+                                الأنعام
+                            </option>
+
+                            <option>
+                                الأعراف
+                            </option>
+
+                            <option>
+                                الأنفال
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            نوع التسميع
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="tasmee3Type"
+                            required>
+
+                            <option value="">
+                                اختر النوع
+                            </option>
+
+                            <option>
+                                حفظ جديد
+                            </option>
+
+                            <option>
+                                مراجعة
+                            </option>
+
+                            <option>
+                                تسميع شامل
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            التقييم
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="tasmee3Evaluation"
+                            required>
+
+                            <option value="">
+                                اختر التقييم
+                            </option>
+
+                            <option value="ممتاز">
+                                ممتاز
+                            </option>
+
+                            <option value="جيد جداً">
+                                جيد جداً
+                            </option>
+
+                            <option value="جيد">
+                                جيد
+                            </option>
+
+                            <option value="يحتاج مراجعة">
+                                يحتاج مراجعة
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            ملاحظات المعلم
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="tasmee3Note"
+                            placeholder="مثال: راجع الآيات الأخيرة">
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-success mt-4 px-4">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    حفظ التسميع
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        السجل
+                    </small>
+
+                    <h3>
+                        سجل التسميعات
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                السورة
+                            </th>
+
+                            <th>
+                                النوع
+                            </th>
+
+                            <th>
+                                التقييم
+                            </th>
+
+                            <th>
+                                التاريخ
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tasmee3Table">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SCHEDULE
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-schedule">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        مواعيدك
+                    </small>
+
+                    <h3>
+                        جدول الحلقة 📅
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                اليوم
+                            </th>
+
+                            <th>
+                                الموعد
+                            </th>
+
+                            <th>
+                                الحلقة
+                            </th>
+
+                            <th>
+                                المعلم
+                            </th>
+
+                            <th>
+                                النشاط
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                السبت
+                            </td>
+
+                            <td>
+                                5:00 م
+                            </td>
+
+                            <td>
+                                الحفظ والمراجعة
+                            </td>
+
+                            <td>
+                                الشيخ محمد سعدالله
+                            </td>
+
+                            <td>
+                                حفظ جديد
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                الاثنين
+                            </td>
+
+                            <td>
+                                5:00 م
+                            </td>
+
+                            <td>
+                                الحفظ والمراجعة
+                            </td>
+
+                            <td>
+                                الشيخ محمد سعدالله
+                            </td>
+
+                            <td>
+                                مراجعة
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                الأربعاء
+                            </td>
+
+                            <td>
+                                5:00 م
+                            </td>
+
+                            <td>
+                                الحفظ والمراجعة
+                            </td>
+
+                            <td>
+                                الشيخ محمد سعدالله
+                            </td>
+
+                            <td>
+                                تسميع
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        حلقتك
+                    </small>
+
+                    <h3>
+                        معلومات الحلقة
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="circle-content">
+
+                <div class="circle-main-icon">
+
+                    <i class="bi bi-people-fill"></i>
+
+                </div>
+
+
+                <div class="circle-details">
+
+                    <span>
+                        الحلقة
+                    </span>
+
+                    <h4>
+                        حلقة الحفظ والمراجعة
+                    </h4>
+
+                    <div class="teacher-name">
+
+                        <i class="bi bi-person-check"></i>
+
+                        الشيخ محمد سعدالله
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         NOTIFICATIONS
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-notifications">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        تابع كل جديد
+                    </small>
+
+                    <h3>
+                        الإشعارات 🔔
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="mini-notifications"
+                id="allNotifications">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ACHIEVEMENTS
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-achievements">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        تطورك
+                    </small>
+
+                    <h3>
+                        الإنجازات 🏆
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="achievement-preview"
+                id="allAchievements">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PROFILE
+    ===================================== -->
+
+    <section
+        class="page-section d-none"
+        id="section-profile">
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <small>
+                        حساب الطالب
+                    </small>
+
+                    <h3>
+                        الملف الشخصي 👤
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        الاسم
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="profileName"
+                        value="أحمد محمد علي">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        المرحلة
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="profileLevel"
+                        value="المرحلة المتوسطة">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        الحلقة
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="حلقة الحفظ والمراجعة"
+                        disabled>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label class="form-label">
+                        المعلم
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="الشيخ محمد سعدالله"
+                        disabled>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn btn-success mt-4"
+                id="saveProfile">
+
+                <i class="bi bi-save"></i>
+
+                حفظ البيانات
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="dashboard-footer">
+
+        © <span id="currentYear"></span>
+
+        مكتب الجمعية الشرعية - كفر الشيخ
+
+        <br>
+
+        جميع الحقوق محفوظة
+
+    </footer>
+
+</main>
+
+
+
+<!-- JavaScript -->
+
+<script src="student.js"></script>
+
+</body>
+</html>

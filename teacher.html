@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>لوحة المعلم | مكتب الجمعية الشرعية</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Teacher CSS -->
+    <link rel="stylesheet" href="teacher.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="logo.png.jpeg" alt="شعار المكتب">
+
+            <div>
+                <h5>مكتب الجمعية الشرعية</h5>
+                <span>كفر الشيخ</span>
+            </div>
+
+        </div>
+
+        <div class="teacher-mini-profile">
+
+            <div class="teacher-avatar">
+                <i class="bi bi-person"></i>
+            </div>
+
+            <div>
+                <strong>المعلم</strong>
+                <small>معلم حلقة</small>
+            </div>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="#" class="menu-link active" data-section="home">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>الرئيسية</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="students">
+                    <i class="bi bi-people-fill"></i>
+                    <span>طلاب الحلقة</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="tasmee">
+                    <i class="bi bi-book-half"></i>
+                    <span>التسميع</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="schedule">
+                    <i class="bi bi-calendar3"></i>
+                    <span>جدول الحلقة</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="attendance">
+                    <i class="bi bi-check2-square"></i>
+                    <span>الحضور والغياب</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="notifications">
+                    <i class="bi bi-bell-fill"></i>
+                    <span>الإشعارات</span>
+                    <b class="notification-number">3</b>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="achievements">
+                    <i class="bi bi-trophy-fill"></i>
+                    <span>إنجازات الحلقة</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="reports">
+                    <i class="bi bi-bar-chart-fill"></i>
+                    <span>التقارير</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="profile">
+                    <i class="bi bi-person-circle"></i>
+                    <span>الملف الشخصي</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+                <i class="bi bi-box-arrow-right"></i>
+                تسجيل الخروج
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="top-title">
+                <span>لوحة المعلم</span>
+                <h4>مكتب الجمعية الشرعية لتحفيظ القرآن الكريم</h4>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+                    <i class="bi bi-bell"></i>
+                    <span>3</span>
+                </button>
+
+                <div class="top-user">
+                    <div class="small-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <strong>المعلم</strong>
+                        <small>معلم حلقة التجويد</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="content-area">
+
+
+            <!-- ================= HOME ================= -->
+
+            <section class="dashboard-section active-section" id="home">
+
+                <div class="welcome-box">
+
+                    <div>
+                        <span>السلام عليكم ورحمة الله 🌿</span>
+
+                        <h1>
+                            أهلاً بك يا معلم
+                        </h1>
+
+                        <p>
+                            تابع طلابك، سجل التسميع، وتابع مستوى الحلقة بسهولة.
+                        </p>
+                    </div>
+
+                    <div class="welcome-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- Statistics -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>طلاب الحلقة</span>
+                            <h2 id="studentsCount">8</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            <i class="bi bi-person-check-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>الحاضرون اليوم</span>
+                            <h2 id="presentCount">6</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon yellow">
+                            <i class="bi bi-book-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>تم تسميعهم</span>
+                            <h2 id="tasmeeCount">5</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+
+                        <div>
+                            <span>متوسط الحلقة</span>
+                            <h2>87%</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Today's task -->
+
+                <div class="two-columns">
+
+                    <div class="panel-card">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="section-small-title">متابعة اليوم</span>
+                                <h3>طلاب الحلقة</h3>
+                            </div>
+
+                            <button class="view-btn" data-go="students">
+                                عرض الكل
+                            </button>
+                        </div>
+
+                        <div id="homeStudentsList" class="student-mini-list"></div>
+
+                    </div>
+
+
+                    <div class="panel-card">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="section-small-title">تنبيه</span>
+                                <h3>ما يحتاج انتباهك</h3>
+                            </div>
+                        </div>
+
+                        <div class="attention-box">
+
+                            <div class="attention-item">
+                                <i class="bi bi-exclamation-circle"></i>
+                                <div>
+                                    <strong>طالبان يحتاجان للمراجعة</strong>
+                                    <p>يوجد طلاب حصلوا على تقييم يحتاج مراجعة.</p>
+                                </div>
+                            </div>
+
+                            <div class="attention-item">
+                                <i class="bi bi-calendar-x"></i>
+                                <div>
+                                    <strong>طالبان لم يسجل حضورهما</strong>
+                                    <p>يرجى تحديث حالة الحضور.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STUDENTS ================= -->
+
+            <section class="dashboard-section" id="students">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>إدارة الحلقة</span>
+                        <h2>طلاب الحلقة</h2>
+                        <p>تابع مستوى كل طالب وسجل ملاحظاتك.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="filters-card">
+
+                    <div class="search-box">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            type="text"
+                            id="studentSearch"
+                            placeholder="ابحث عن طالب..."
+                        >
+
+                    </div>
+
+                    <div class="filter-buttons">
+
+                        <button class="filter-btn active" data-filter="all">
+                            الكل
+                        </button>
+
+                        <button class="filter-btn" data-filter="present">
+                            حاضر
+                        </button>
+
+                        <button class="filter-btn" data-filter="absent">
+                            غائب
+                        </button>
+
+                        <button class="filter-btn" data-filter="review">
+                            يحتاج مراجعة
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="studentsGrid" class="students-grid"></div>
+
+            </section>
+
+
+            <!-- ================= TASME3 ================= -->
+
+            <section class="dashboard-section" id="tasmee">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>متابعة الحفظ</span>
+                        <h2>تسجيل التسميع</h2>
+                        <p>سجل تسميع الطالب واحفظ التقييم والملاحظات.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-panel">
+
+                    <form id="tasmeeForm">
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <label>اختر الطالب</label>
+
+                                <select id="tasmeeStudent" required>
+                                    <option value="">اختر الطالب</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>نوع التسميع</label>
+
+                                <select id="tasmeeType" required>
+
+                                    <option value="">
+                                        اختر النوع
+                                    </option>
+
+                                    <option value="حفظ جديد">
+                                        حفظ جديد
+                                    </option>
+
+                                    <option value="مراجعة">
+                                        مراجعة
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>السورة</label>
+
+                                <input
+                                    type="text"
+                                    id="surah"
+                                    placeholder="مثال: سورة الملك"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-3">
+
+                                <label>من آية</label>
+
+                                <input
+                                    type="number"
+                                    id="fromAyah"
+                                    min="1"
+                                    placeholder="1"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-3">
+
+                                <label>إلى آية</label>
+
+                                <input
+                                    type="number"
+                                    id="toAyah"
+                                    min="1"
+                                    placeholder="10"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>التقييم</label>
+
+                                <select id="evaluation" required>
+
+                                    <option value="">
+                                        اختر التقييم
+                                    </option>
+
+                                    <option value="ممتاز">
+                                        ممتاز
+                                    </option>
+
+                                    <option value="جيد جدًا">
+                                        جيد جدًا
+                                    </option>
+
+                                    <option value="جيد">
+                                        جيد
+                                    </option>
+
+                                    <option value="يحتاج مراجعة">
+                                        يحتاج مراجعة
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>ملاحظات المعلم</label>
+
+                                <input
+                                    type="text"
+                                    id="teacherNote"
+                                    placeholder="اكتب ملاحظتك..."
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="save-btn" type="submit">
+
+                            <i class="bi bi-check2-circle"></i>
+
+                            حفظ التسميع
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="panel-card mt-4">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-small-title">السجل</span>
+                            <h3>آخر التسميعات</h3>
+                        </div>
+
+                    </div>
+
+                    <div id="tasmeeHistory"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SCHEDULE ================= -->
+
+            <section class="dashboard-section" id="schedule">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>تنظيم الحلقة</span>
+                        <h2>جدول الحلقة</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-grid">
+
+                    <div class="schedule-card">
+                        <div class="schedule-day">السبت</div>
+                        <h4>حلقة التجويد وتصحيح التلاوة</h4>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            05:00 مساءً - 07:00 مساءً
+                        </p>
+                        <span>الشيخ إبراهيم عطية</span>
+                    </div>
+
+
+                    <div class="schedule-card">
+                        <div class="schedule-day">الإثنين</div>
+                        <h4>مراجعة الحفظ</h4>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            05:00 مساءً - 07:00 مساءً
+                        </p>
+                        <span>الشيخ إبراهيم عطية</span>
+                    </div>
+
+
+                    <div class="schedule-card">
+                        <div class="schedule-day">الأربعاء</div>
+                        <h4>تطبيق أحكام التجويد</h4>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            05:00 مساءً - 07:00 مساءً
+                        </p>
+                        <span>الشيخ إبراهيم عطية</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ATTENDANCE ================= -->
+
+            <section class="dashboard-section" id="attendance">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>متابعة الطلاب</span>
+                        <h2>الحضور والغياب</h2>
+                        <p>حدد حالة كل طالب اليوم.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="panel-card">
+
+                    <div id="attendanceList"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= NOTIFICATIONS ================= -->
+
+            <section class="dashboard-section" id="notifications">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>التنبيهات</span>
+                        <h2>الإشعارات</h2>
+                        <p>تابع التنبيهات المهمة الخاصة بالحلقة.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="notifications-list">
+
+                    <div class="notification-card warning">
+
+                        <div class="notification-icon">
+                            <i class="bi bi-exclamation-triangle"></i>
+                        </div>
+
+                        <div>
+                            <strong>طلاب يحتاجون للمراجعة</strong>
+                            <p>
+                                يوجد طالبان حصلا على تقييم يحتاج مراجعة.
+                            </p>
+                            <small>منذ ساعة</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-card info">
+
+                        <div class="notification-icon">
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+
+                        <div>
+                            <strong>تحديث جدول الحلقة</strong>
+                            <p>
+                                تم تحديث موعد حلقة المراجعة لهذا الأسبوع.
+                            </p>
+                            <small>منذ 3 ساعات</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-card success">
+
+                        <div class="notification-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+
+                        <div>
+                            <strong>إنجاز جديد</strong>
+                            <p>
+                                حققت الحلقة نسبة حضور 92% هذا الأسبوع.
+                            </p>
+                            <small>أمس</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ACHIEVEMENTS ================= -->
+
+            <section class="dashboard-section" id="achievements">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>تميز الحلقة</span>
+                        <h2>إنجازات الحلقة 🏆</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-grid">
+
+                    <div class="achievement-card">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        <h3>92%</h3>
+
+                        <p>نسبة الحضور هذا الأسبوع</p>
+
+                    </div>
+
+
+                    <div class="achievement-card">
+
+                        <i class="bi bi-book-fill"></i>
+
+                        <h3>18</h3>
+
+                        <p>صفحة تم حفظها هذا الأسبوع</p>
+
+                    </div>
+
+
+                    <div class="achievement-card">
+
+                        <i class="bi bi-trophy-fill"></i>
+
+                        <h3>6</h3>
+
+                        <p>طلاب حققوا تقدمًا مميزًا</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel-card mt-4">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-small-title">طالب الأسبوع</span>
+                            <h3>🌟 أحمد محمد علي</h3>
+                        </div>
+
+                    </div>
+
+                    <p class="achievement-message">
+                        حقق الطالب تقدمًا مميزًا في الحفظ والمراجعة
+                        خلال هذا الأسبوع. استمر في التقدم يا أحمد.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= REPORTS ================= -->
+
+            <section class="dashboard-section" id="reports">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>متابعة الأداء</span>
+                        <h2>التقارير</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="report-grid">
+
+                    <div class="report-card">
+
+                        <i class="bi bi-person-check"></i>
+
+                        <h3>92%</h3>
+
+                        <p>متوسط الحضور</p>
+
+                        <div class="progress">
+                            <div class="progress-bar" style="width:92%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <i class="bi bi-book"></i>
+
+                        <h3>87%</h3>
+
+                        <p>متوسط مستوى الحفظ</p>
+
+                        <div class="progress">
+                            <div class="progress-bar" style="width:87%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <i class="bi bi-graph-up"></i>
+
+                        <h3>78%</h3>
+
+                        <p>نسبة التطور</p>
+
+                        <div class="progress">
+                            <div class="progress-bar" style="width:78%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <section class="dashboard-section" id="profile">
+
+                <div class="page-heading">
+
+                    <div>
+                        <span>الحساب</span>
+                        <h2>الملف الشخصي</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-large-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h3>الشيخ إبراهيم عطية</h3>
+
+                    <p>معلم حلقة التجويد وتصحيح التلاوة</p>
+
+                    <div class="profile-info">
+
+                        <div>
+                            <span>المكتب</span>
+                            <strong>الجمعية الشرعية بكفر الشيخ</strong>
+                        </div>
+
+                        <div>
+                            <span>نوع الحلقة</span>
+                            <strong>التجويد وتصحيح التلاوة</strong>
+                        </div>
+
+                        <div>
+                            <span>عدد الطلاب</span>
+                            <strong>8 طلاب</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= STUDENT DETAILS MODAL ================= -->
+
+<div class="modal fade" id="studentModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    سجل الطالب
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body" id="studentModalBody">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Teacher JS -->
+
+<script src="teacher.js"></script>
+
+</body>
+</html>
